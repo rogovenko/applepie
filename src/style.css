@@ -1,0 +1,47 @@
+:root {
+  --paper: #faf7f0;
+  --paper-soft: #f2ede1;
+  --ink: #24211c;
+  --ink-soft: #4a463d;
+  --muted: #8a8375;
+  --line: #e0d9c8;
+  --gold: #b08635;
+  --gold-soft: #c9a24b;
+  --max: 720px;
+  --serif-display: "Cormorant Garamond", "Noto Serif Thai", Georgia, "Times New Roman", serif;
+  --serif-body: "PT Serif", "Noto Serif Thai", Georgia, "Times New Roman", serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif-body);
+  font-size: 19px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); transition: color .2s ease, border-color .2s ease; }
+a:hover { color: var(--gold); border-color: var(--gold); }
+h1, h2, h3 { font-family: var(--serif-display); font-weight: 500; line-height: 1.15; color: var(--ink); margin: 0 0 .4em; }
+h1 { font-size: clamp(2.6rem, 6vw, 4.2rem); }
+h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); }
+h3 { font-size: 1.4rem; }
+p { margin: 0 0 1.2em; }
+.container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.btn {
+  display: inline-block; font-family: var(--serif-body); font-size: 1rem; letter-spacing: .02em;
+  padding: .75em 1.6em; border-radius: 2px; border: 1px solid var(--ink);
+  background: var(--ink); color: var(--paper); cursor: pointer; transition: all .2s ease;
+}
+.btn:hover { background: transparent; color: var(--ink); }
+.btn--ghost { background: transparent; color: var(--ink); }
+.btn--ghost:hover { background: var(--ink); color: var(--paper); }
+.eyebrow { font-family: var(--serif-body); text-transform: uppercase; letter-spacing: .22em; font-size: .72rem; color: var(--muted); margin-bottom: 1.2em; }
+.rule { width: 60px; height: 1px; background: var(--gold-soft); border: none; margin: 2.5rem 0; }
+.center { text-align: center; }
+.fade-enter-active, .fade-leave-active { transition: opacity .35s ease; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
+@media (max-width: 600px) { body { font-size: 18px; } }
